@@ -1,0 +1,19 @@
+name: 'mailchimp'
+version: '1.0'
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+test-paths: ["test"]
+data-paths: ["data"]
+
+models:
+    mailchimp:
+        fivetran:
+            vars:
+                - subs_activities_table: mailchimp.campaign_subscriber_activity
+                - campaigns_table: mailchimp.campaign
+                - list_members_table: mailchimp.list_member
+                - lists_table: mailchimp.list
+                - members_table: mailchimp.member

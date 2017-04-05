@@ -1,0 +1,47 @@
+mailchimp_members:
+    constraints:
+        not_null:
+            - id
+            - email_address
+            - unique_email_id
+            - status
+            - member_rating
+        unique:
+            - id
+            - unique_email_id
+            - email_address
+
+mailchimp_campaigns:
+    constraints:
+        not_null:
+            - status
+            - created_at
+        unique:
+            - id
+
+mailchimp_campaign_subscriber_activities:
+    constraints:
+        not_null:
+            - happened_at
+            - action
+            - campaign_id
+            - email_address
+        unique:
+            - id
+
+mailchimp_lists:
+    constraints:
+        not_null:
+            - id
+            - name
+        unique:
+            - id
+
+mailchimp_list_members:
+    constraints:
+        not_null:
+            - id
+            - list_id
+            - email_address
+        unique:
+            - id
