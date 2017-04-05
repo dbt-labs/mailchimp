@@ -12,8 +12,8 @@ models:
     mailchimp:
         fivetran:
             vars:
-                - subs_activities_table: #schema.table
-                - campaigns_table: #schema.table
-                - list_members_table: #schema.table
-                - lists_table: #schema.table
-                - members_table: #schema.table
+                subs_activities_table: #schema.table
+                campaigns_table: #schema.table
+                list_members_table: #schema.table
+                lists_table: #schema.table
+                members_table: #schema.table
